@@ -65,3 +65,26 @@ void MotorDataLogger::on_disconnectPushBtn_clicked()
     }
 
 }
+
+void MotorDataLogger::on_startMotorPushBtn_clicked()
+{
+    int count =0;
+    if(serialPort->isOpen() && serialPort->isReadable()){
+        while(serialPort->canReadLine()){
+            QByteArray ba = serialPort->readLine();
+            ba = ba.replace('\0', QByteArray());
+            qInfo() << ba;
+            qInfo() << count++;
+        }
+    }
+}
+
+void MotorDataLogger::on_stopMotorPushBtn_clicked()
+{
+    if(serialPort->isOpen() && serialPort->isReadable()){
+        serialPort->flush();
+        serialPort->close();
+        qInfo() << "Disconnected";
+        ui->labelConnected->setText("Device disconnected");
+    }
+}

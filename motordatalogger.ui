@@ -64,7 +64,7 @@
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QComboBox" name="portList"/>
@@ -88,13 +88,13 @@
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="startMotorPushBtn">
       <property name="text">
        <string>Start Logging Motor Data</string>
       </property>
      </widget>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="stopMotorPushBtn">
      <property name="text">
       <string>Stop Logging Motor Data</string>
      </property>

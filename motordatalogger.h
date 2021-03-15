@@ -20,6 +20,10 @@ private slots:
 
     void on_disconnectPushBtn_clicked();
 
+    void on_startMotorPushBtn_clicked();
+
+    void on_stopMotorPushBtn_clicked();
+
 private:
     Ui::MotorDataLogger *ui;
 };
